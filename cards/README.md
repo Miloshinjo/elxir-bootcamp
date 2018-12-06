@@ -1,21 +1,18 @@
-# Cards
+## Lesson 1 - Basics
 
-**TODO: Add description**
+**
+* code is organized into modules of code (module is a collection of different methods and functions).
+* convention is to use double-quotes in elixir code.
+* "do" and "end" are like {} in javascript, defining a block of code.
+* "def" stands for "define".
+* opening the elixir shell: "iex -S mix".
+**
 
-## Installation
+## Lesson 2 - Passing arguments
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `cards` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:cards, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/cards](https://hexdocs.pm/cards).
+**
+* Cards.shuffle/0 === 'you called shuffle cards with 0 arguments'
+* arity - number of arguments the function accepts
+* Enum module is used for working with lists of data
+**
 
