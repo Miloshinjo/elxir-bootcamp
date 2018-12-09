@@ -7,12 +7,14 @@
 * opening the elixir shell: *iex -S mix*.
 * joining strings in Elixir is done by using template strings *#{value}*
 * Move away from IF statements and instead use CASE and Pattern Matching
+* 0 is not falsy in Elixir.
 
 ## Lesson 2 - Passing arguments
 
 * Cards.shuffle/0 === 'you called shuffle cards with 0 arguments'
 * arity - number of arguments the function accepts
 * Enum module is used for working with lists of data
+* Passing a reference to a function as an argument is not done in the same way as other stuff is passed to a function. Passing a function reference has a special syntax: *&function_name/1*. *&* means -> "I'm passing a reference to a function. */1* means -> I am passing a function taht takes 1 argument (if we have more functions with the same name).
 
 ## Lesson 3 - Lists
 
@@ -20,6 +22,7 @@
 * List comperhensions - a kind of a for loop in Elixir. *for item <- items do [code] end*. A comperhension is a mapping function (making a new array).
 * Nesting comperhensions inside one another is the wrong way
 * Best way for more comperhensions is to double them up *for item <- items, el <- els do [code] end*
+* For joining lists together we use the operator *++*.
 
 ## Lesson 4 - Tuples
 
@@ -34,6 +37,8 @@
 * Pattern matching works with Lists as well as Tuples.
 * If the left-hand side has a hard-coded value, Elixir will REQUIRE that a right-hand side have the same exact value
 * Values in a pattern matching block that start with the underscore (_), will be skipped when doing pattern matching
+* *[r, g, b | _tail] = list* - when we want to pull of only 3 elements from a big list, _tail represents other values we are not interesting.
+* Values can be pattern matched directly into the function arguments list.
 
 ## Lesson 6 - Saving Files
 
@@ -74,4 +79,18 @@
 * Updating using special syntax: *%{ colors | primary: "blue" }*. Gotcha is that this can only be used when we are updating an existing property, it cannot be used to add a property.
 
 ## Lesson 12 - Keyword Lists
+
+* Keyword list - a List of Tuples.
+* Syntax: *[{:primary, "red"}, {:secondary, "green"}]* will return *[primary: "red", secondary: "green"]*
+* Internally, Elixir considers these key value pairs as tuples.
+* Shortened syntax can be used, so keyword lists can be declared as *[primary: "red", secondary: "green"]*.
+* In Maps, keys cannot be duplicated and their values will be overwritten
+* Keyword lists are most utilised in working with the library called Ecto (for working with databases).
+* Square brackets [] can be omitted from the keyword list if it is passed in a function as the last argument. *User.find_where(where: user.age > 10, where: user.subscribed == true)*
+
+## Lesson 13 - Structs
+
+* Struct - a map that is used to store data in an Elixir app. They can be assigned default values. Struct will enforce that only properties that are defined on it can be used.
+* Syntax - defined usually in a new module.
+
 
