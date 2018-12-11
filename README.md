@@ -93,4 +93,9 @@
 * Struct - a map that is used to store data in an Elixir app. They can be assigned default values. Struct will enforce that only properties that are defined on it can be used.
 * Syntax - defined usually in a new module.
 
+## Lesson 14 - Phoenix
+
+* Framework whose job it is to behave as a web server. It can give clients HTML data, JSON and can open Web Sockets. It can store files of all types.
+* How Phoenix handles incoming requests? -> I processes the request in a series of small tiny functions and pass the request on thru the pipeline.
+
 
