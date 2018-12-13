@@ -98,4 +98,18 @@
 * Framework whose job it is to behave as a web server. It can give clients HTML data, JSON and can open Web Sockets. It can store files of all types.
 * How Phoenix handles incoming requests? -> I processes the request in a series of small tiny functions and pass the request on thru the pipeline.
 
+## Lesson 15 - Phoenix rules and best practices
+
+* Naming conventions are very important in Phoenix MVC Architecture. Models, views and controllers should share the same name word.
+* Function *render("index.html")* renders some HTML code that is served up.
+* Phoenix follows restful conventions. *get "/topics/new", TopicController, :new*. Make a GET reques to */topics/new* and send them to *TopicController* and run the function *:new*
+* Controller names are by convention named *ModuleNameController*, in singular.
+* Shortcut keywords: *import* --> take all the functions out of this module and give them to this other module. *alias* --> give me a shortcut to this other module, my fingers are lazy. *use* --> I want to do some really, really fancy setup.
+
+## Lesson 16 - Working with Databases (Postgresql)
+
+* To define a database structure, we do what is called a *migration*. We create a migration file using the command *mix ecto.gen.migration migration_name*.
+* Migrations are prepended with a timestamp cause order in which they are executed is important.
+* We run a migration using the command *mix ecto.migrate*
+
 
