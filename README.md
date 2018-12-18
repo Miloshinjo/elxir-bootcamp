@@ -112,4 +112,13 @@
 * Migrations are prepended with a timestamp cause order in which they are executed is important.
 * We run a migration using the command *mix ecto.migrate*
 
+## Lesson 17 - Models
+
+* There are 2 items that every model has to contain. First) Model schema --> contains information how model relates to postgresql db. Second) Changeset --> uses a special pattern to code and it's all cause there are not classes in Elixir.
+  ```def changeset(struct, params \\ %{}) do struct
+    |> cast(params, [:title])
+    |> validate_required([:title])
+  end```
+  --> *Struct* here represents the record in our database. *Params* hash represents the new properties that we want to update our struct with.
+
 
